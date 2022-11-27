@@ -3,10 +3,10 @@ new Vue({
     data: {
         mensaje:"Este es el Mensaje"
     },
-    beforeCreate: function() {
+    beforeCreate : function() {
         console.log ("Llamando beforeCreate");
     },
-    created: function() {
+    created : function() {
         console.log ("Llamando create");
     },
     beforeMount : function() {
@@ -15,16 +15,22 @@ new Vue({
     mounted : function() {
         console.log ("Llamando mounted");
     },
-    beforeUpdate: function() {
+    beforeUpdate : function() {
         console.log ("Llamando beforeUpdate");
     },
-    update: function() {
+    updated : function() {
         console.log ("Llamando update");
     },
-    beforeDestroy: function() {
+    beforeDestroy : function() {
             console.log ("Llamando beforeDestroy");
         },
-    destroyed: function() {
+    destroyed : function() {
             console.log ("Llamando destroyed");
         },
-});
+    methods : {
+        destruir : function (){
+         this.$destroy();
+        }
+          
+    }
+})
